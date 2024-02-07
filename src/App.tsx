@@ -1,13 +1,13 @@
 import "./App.css";
 import { useDispatch } from "react-redux";
-import { SubmitHandler, useForm, FieldValues } from "react-hook-form"; // Import FieldValues
+import { SubmitHandler, useForm, FieldValues } from "react-hook-form";
 import { setFormState } from "./store/actions";
 import { PeriodicForm } from "./store/reducer";
 import Breakify from "./Breakify";
 
 function App() {
   const dispatch = useDispatch();
-  const { register, handleSubmit } = useForm<PeriodicForm>(); // Use PeriodicForm here
+  const { register, handleSubmit } = useForm<PeriodicForm>();
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     dispatch(setFormState(data as PeriodicForm));
