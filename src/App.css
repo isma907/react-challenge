@@ -1,0 +1,49 @@
+.main_wrapper {
+  display: flex;
+}
+
+.form_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form_control_row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form_control_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  flex: 1;
+}
+
+.title_highlight {
+  background: #085038;
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.form_button {
+  background: #085038;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.form_control {
+  background: #b1b1b1;
+  color: #323232;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: none;
+}
