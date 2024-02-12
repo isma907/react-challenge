@@ -4,8 +4,8 @@ export interface PeriodicForm {
 }
 
 const initialState: PeriodicForm = {
-  firstname: "",
-  lastname: "",
+  firstname: "Breaking",
+  lastname: "Bad",
 };
 
 const rootReducer = (state = initialState, action: any) => {

@@ -39,9 +39,11 @@ function App() {
             </div>
           </div>
 
-          <button type="submit" className="form_button">
-            Breakify
-          </button>
+          <div className="form_submit_container">
+            <button type="submit" className="form_button">
+              Breakify
+            </button>
+          </div>
         </form>
       </section>
     </main>

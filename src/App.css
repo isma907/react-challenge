@@ -19,12 +19,15 @@
   padding: 0px 10px;
   flex: 1;
 }
+.form_control_wrapper label {
+  margin-bottom: 5px;
+}
 
 .title_highlight {
   background: #085038;
   color: #fff;
-  width: 70px;
-  height: 70px;
+  width:100px;
+  height: 100px;
   display: inline-block;
   text-align: center;
   text-transform: capitalize;
@@ -35,6 +38,13 @@
   color: #fff;
   font-weight: bold;
   margin: 10px;
+  width: 100%;
+  padding: 15px;
+}
+
+.form_submit_container {
+  display: flex;
+  justify-content: center;
 }
 
 .form_control {
@@ -46,4 +56,10 @@
   border-radius: 5px;
   margin-bottom: 20px;
   border: none;
+  padding: 5px 10px;
+}
+
+.breakify_title {
+  font-size: 70px;
+  text-align: center;
 }
