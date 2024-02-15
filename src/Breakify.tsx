@@ -70,14 +70,19 @@ const Breakify = () => {
   ];
 
   const findFirstMatch = (name: string) => {
+    name = name.toLowerCase();
     let highlightedName = name;
-    if (name.length === 1 && periodicTable.includes(name)) {
+    const periodicTableLowerCase = periodicTable.map((element) =>
+      element.toLowerCase()
+    );
+
+    if (name.length === 1 && periodicTableLowerCase.includes(name)) {
       return `<span class="title_highlight">${name}</span>`;
     }
 
     for (let i = 0; i < name.length - 1; i++) {
       const element = name.substring(i, i + 2);
-      if (periodicTable.includes(element)) {
+      if (periodicTableLowerCase.includes(element)) {
         highlightedName =
           highlightedName.substring(0, i) +
           `<span class="title_highlight">${highlightedName.substring(
@@ -86,7 +91,7 @@ const Breakify = () => {
           )}</span>` +
           highlightedName.substring(i + 2);
         return highlightedName;
-      } else if (periodicTable.includes(name[i])) {
+      } else if (periodicTableLowerCase.includes(name[i])) {
         highlightedName =
           highlightedName.substring(0, i) +
           `<span class="title_highlight">${name[i]}</span>` +
@@ -102,8 +107,14 @@ const Breakify = () => {
 
   return (
     <div className="breakify_name">
-      <h1 dangerouslySetInnerHTML={{ __html: highlightedFirstname }} className="breakify_title"></h1>
-      <h1 dangerouslySetInnerHTML={{ __html: highlightedLastname }} className="breakify_title"></h1>
+      <h1
+        dangerouslySetInnerHTML={{ __html: highlightedFirstname }}
+        className="breakify_title"
+      ></h1>
+      <h1
+        dangerouslySetInnerHTML={{ __html: highlightedLastname }}
+        className="breakify_title"
+      ></h1>
     </div>
   );
 };
